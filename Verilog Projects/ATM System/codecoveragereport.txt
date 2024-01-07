@@ -1,0 +1,1159 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ATM.v
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        33        29         4    87.87%
+
+================================Branch Details================================
+
+Branch Coverage for file ATM.v --
+
+------------------------------------IF Branch------------------------------------
+    68                                    514592     Count coming in to IF
+    68              1                      10019         if (~rst) begin
+    73              1                     504573         end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    75                                    504573     Count coming in to IF
+    75              1                          1             if ($time - start_time >= TIMEOUT) begin
+                                          504572     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    90                                     52101     Count coming in to CASE
+    91              1                      21221             IDLE_STATE: begin
+    100             1                       2534             LANGUAGE_SELECTED_STATE:
+    104             1                       2536             PASSWORD_ENTERED_STATE: begin
+    121             1                      18504             OPERATION_SELECTED_STATE:
+    128             1                       2398             BALANCE_SERVICE_STATE:
+    131             1                       2461             DEPOSIT_STATE:
+    134             1                       2447             WITHDRAW_STATE:
+    137             1                    ***0***             default:
+Branch totals: 7 hits of 8 branches = 87.50%
+
+------------------------------------IF Branch------------------------------------
+    92                                     21221     Count coming in to IF
+    92              1                       2540                 if (card_inserted && entered == 1'b0) begin
+    96              1                      18681                 else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    101                                     2534     Count coming in to IF
+    101             1                       2534                 if (language_selected === 1'b0 || language_selected === 1'b1) next_state = PASSWORD_ENTERED_STATE;
+    102             1                    ***0***                 else next_state = LANGUAGE_SELECTED_STATE;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    108                                    12680     Count coming in to IF
+    108             1                       2533                         if (CardNo == CardNos[i] && Password == Passwords[i]) begin
+                                           10147     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    113                                     2536     Count coming in to IF
+    113             1                       2533                 if (password_entered) begin
+    116             1                          3                 else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    122                                    18504     Count coming in to IF
+    122             1                       6151                 if (request === 2'b00) next_state = BALANCE_SERVICE_STATE;
+    123             1                       4922                 else if (request == 2'b01) next_state = DEPOSIT_STATE;
+    124             1                       4894                 else if (request == 2'b10) next_state = WITHDRAW_STATE;
+    125             1                       2537                 else if (request == 2'b11) next_state = IDLE_STATE;
+    126             1                    ***0***                 else next_state = OPERATION_SELECTED_STATE;
+Branch totals: 4 hits of 5 branches = 80.00%
+
+------------------------------------CASE Branch------------------------------------
+    153                                    52101     Count coming in to CASE
+    155             1                       2398             BALANCE_SERVICE_STATE: begin
+    159             1                       2461             DEPOSIT_STATE: begin
+    169             1                       2447             WITHDRAW_STATE: begin
+                                           44795     All False Count
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    160                                     2461     Count coming in to IF
+    160             1                       2459                 if (deposit_value <= 12'd2000) begin
+    164             1                          2                 else begin 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    170                                     2447     Count coming in to IF
+    170             1                       2447                 if (withdraw_value < Balances[index]) begin
+    174             1                    ***0***                 else begin 
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      13         8         5    61.53%
+
+================================Condition Details================================
+
+Condition Coverage for file ATM.v --
+
+----------------Focused Condition View-------------------
+Line       75 Item    1  (($time() - start_time) >= TIMEOUT)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                           Input Term   Covered  Reason for no coverage   Hint
+                          -----------  --------  -----------------------  --------------
+  (($time() - start_time) >= TIMEOUT)         Y
+
+     Rows:       Hits  FEC Target                             Non-masking condition(s)      
+ ---------  ---------  --------------------                   -------------------------     
+  Row   1:          1  (($time() - start_time) >= TIMEOUT)_0  -                             
+  Row   2:          1  (($time() - start_time) >= TIMEOUT)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       92 Item    1  (card_inserted && ~entered)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  card_inserted         Y
+        entered         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  card_inserted_0       -                             
+  Row   2:          1  card_inserted_1       ~entered                      
+  Row   3:          1  entered_0             card_inserted                 
+  Row   4:          1  entered_1             card_inserted                 
+
+----------------Focused Condition View-------------------
+Line       101 Item    1  ((language_selected === 1'b0) || (language_selected === 1'b1))
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+                    Input Term   Covered  Reason for no coverage   Hint
+                   -----------  --------  -----------------------  --------------
+  (language_selected === 1'b0)         N  '_0' not hit             Hit '_0'
+  (language_selected === 1'b1)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                      Non-masking condition(s)      
+ ---------  ---------  --------------------            -------------------------     
+  Row   1:    ***0***  (language_selected === 1'b0)_0  ~(language_selected === 1'b1) 
+  Row   2:          1  (language_selected === 1'b0)_1  -                             
+  Row   3:    ***0***  (language_selected === 1'b1)_0  ~(language_selected === 1'b0) 
+  Row   4:          1  (language_selected === 1'b1)_1  ~(language_selected === 1'b0) 
+
+----------------Focused Condition View-------------------
+Line       108 Item    1  ((CardNo == CardNos[i]) && (Password == Passwords[i]))
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+                  Input Term   Covered  Reason for no coverage   Hint
+                 -----------  --------  -----------------------  --------------
+      (CardNo == CardNos[i])         Y
+  (Password == Passwords[i])         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                    Non-masking condition(s)      
+ ---------  ---------  --------------------          -------------------------     
+  Row   1:          1  (CardNo == CardNos[i])_0      -                             
+  Row   2:          1  (CardNo == CardNos[i])_1      (Password == Passwords[i])    
+  Row   3:    ***0***  (Password == Passwords[i])_0  (CardNo == CardNos[i])        
+  Row   4:          1  (Password == Passwords[i])_1  (CardNo == CardNos[i])        
+
+----------------Focused Condition View-------------------
+Line       122 Item    1  (request === 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+  (request === 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request === 0)_0     -                             
+  Row   2:          1  (request === 0)_1     -                             
+
+----------------Focused Condition View-------------------
+Line       123 Item    1  (request == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request == 1)_0      -                             
+  Row   2:          1  (request == 1)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       124 Item    1  (request == 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request == 2)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request == 2)_0      -                             
+  Row   2:          1  (request == 2)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       125 Item    1  (request == 3)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request == 3)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (request == 3)_0      -                             
+  Row   2:          1  (request == 3)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       160 Item    1  (deposit_value <= 2000)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (deposit_value <= 2000)         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  (deposit_value <= 2000)_0  -                             
+  Row   2:          1  (deposit_value <= 2000)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       170 Item    1  (withdraw_value < Balances[index])
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                          Input Term   Covered  Reason for no coverage   Hint
+                         -----------  --------  -----------------------  --------------
+  (withdraw_value < Balances[index])         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                            Non-masking condition(s)      
+ ---------  ---------  --------------------                  -------------------------     
+  Row   1:    ***0***  (withdraw_value < Balances[index])_0  -                             
+  Row   2:          1  (withdraw_value < Balances[index])_1  -                             
+
+
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       7         7         0   100.00%
+    FSM Transitions                 15        11         4    73.33%
+
+================================FSM Details================================
+
+FSM Coverage for file ATM.v --
+
+FSM_ID: state
+    Current State Object : state
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+  91          IDLE_STATE                   0
+ 100LANGUAGE_SELECTED_STATE                   1
+ 104PASSWORD_ENTERED_STATE                   2
+ 121OPERATION_SELECTED_STATE                   3
+ 134      WITHDRAW_STATE                   6
+ 131       DEPOSIT_STATE                   5
+ 128BALANCE_SERVICE_STATE                   4
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+              IDLE_STATE              492376          
+    LANGUAGE_SELECTED_STATE                2534          
+    PASSWORD_ENTERED_STATE                2537          
+    OPERATION_SELECTED_STATE                9839          
+          WITHDRAW_STATE                2447          
+           DEPOSIT_STATE                2461          
+    BALANCE_SERVICE_STATE                2398          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+  94                   0                2534          IDLE_STATE -> LANGUAGE_SELECTED_STATE          
+ 101                   1                2534          LANGUAGE_SELECTED_STATE -> PASSWORD_ENTERED_STATE          
+ 114                   3                2533          PASSWORD_ENTERED_STATE -> OPERATION_SELECTED_STATE          
+  69                   4                   1          PASSWORD_ENTERED_STATE -> IDLE_STATE          
+ 125                   5                2533          OPERATION_SELECTED_STATE -> IDLE_STATE          
+ 124                   6                2447          OPERATION_SELECTED_STATE -> WITHDRAW_STATE          
+ 123                   7                2461          OPERATION_SELECTED_STATE -> DEPOSIT_STATE          
+ 122                   8                2398          OPERATION_SELECTED_STATE -> BALANCE_SERVICE_STATE          
+ 135                   9                2447          WITHDRAW_STATE -> OPERATION_SELECTED_STATE          
+ 132                  11                2461          DEPOSIT_STATE -> OPERATION_SELECTED_STATE          
+ 129                  13                2398          BALANCE_SERVICE_STATE -> OPERATION_SELECTED_STATE          
+    Uncovered Transitions :
+    -----------------------
+Line            Trans_ID          Transition          
+----            --------          ----------          
+  69                   2          LANGUAGE_SELECTED_STATE -> IDLE_STATE
+  69                  10          WITHDRAW_STATE -> IDLE_STATE
+  69                  12          DEPOSIT_STATE -> IDLE_STATE
+  69                  14          BALANCE_SERVICE_STATE -> IDLE_STATE
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   7         7         0   100.00%
+        FSM Transitions             15        11         4    73.33%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      57        53         4    92.98%
+
+================================Statement Details================================
+
+Statement Coverage for file ATM.v --
+
+    1                                                `timescale 1ms/1ms
+    2                                                module ATM_FSM (
+    3                                                    input clk,
+    4                                                    input rst,
+    5                                                    input language_selected,
+    6                                                    input card_inserted,
+    7                                                    input [1:0] request,
+    8                                                    input [11:0] deposit_value,
+    9                                                    input [11:0] withdraw_value,
+    10                                                   input [2:0] CardNo,
+    11                                                   input [2:0] Password,
+    12                                                   output reg deposit_accepted,
+    13                                                   output reg withdraw_accepted,
+    14                                                   output reg [17:0] balance_displayed
+    15                                               );
+    16                                               
+    17                                                   // Define signals
+    18                                                   reg [2:0] state, next_state;
+    19                                                   reg [31:0] start_time;
+    20                                                   reg password_entered;
+    21                                                   reg [2:0] index;
+    22                                                   reg entered;
+    23                                                   reg [2:0] CardNos[4:0];
+    24                                                   reg [2:0] Passwords[4:0];
+    25                                                   reg [17:0] Balances[4:0];
+    26                                               
+    27                                                   initial begin
+    28              1                          1             CardNos[0] = 3'd1;
+    29              1                          1             CardNos[1] = 3'd2;
+    30              1                          1             CardNos[2] = 3'd3;
+    31              1                          1             CardNos[3] = 3'd4;
+    32              1                          1             CardNos[4] = 3'd5;
+    33              1                          1             Passwords[0] = 3'd1;
+    34              1                          1             Passwords[1] = 3'd2;
+    35              1                          1             Passwords[2] = 3'd3;
+    36              1                          1             Passwords[3] = 3'd4;
+    37              1                          1             Passwords[4] = 3'd5;
+    38              1                          1             Balances[0] = 18'd125000;
+    39              1                          1             Balances[1] = 18'd130000;
+    40              1                          1             Balances[2] = 18'd135000;
+    41              1                          1             Balances[3] = 18'd140000;
+    42              1                          1             Balances[4] = 18'd120000;
+    43                                                   end
+    44                                                   integer i;
+    45                                               
+    46                                               // Define Time out
+    47                                               parameter TIMEOUT = 900000; 
+    48                                               
+    49                                               // Define states
+    50                                               parameter IDLE_STATE = 3'b000;
+    51                                               parameter LANGUAGE_SELECTED_STATE = 3'b001;
+    52                                               parameter PASSWORD_ENTERED_STATE = 3'b010;
+    53                                               parameter OPERATION_SELECTED_STATE = 3'b011;
+    54                                               parameter BALANCE_SERVICE_STATE = 3'b100;
+    55                                               parameter DEPOSIT_STATE = 3'b101;
+    56                                               parameter WITHDRAW_STATE = 3'b110;
+    57                                               
+    58                                               
+    59                                               initial begin
+    60              1                          1         start_time = $time;
+    61              1                          1         state = IDLE_STATE;
+    62              1                          1         entered = 0;
+    63              1                          1         password_entered = 1'b0;
+    64                                               end
+    65                                               
+    66                                               // State Memory and Timer
+    67              1                     514592     always @(posedge clk or negedge rst) begin
+    68                                                   if (~rst) begin
+    69              1                      10019             state <= IDLE_STATE;
+    70              1                      10019             start_time = $time;
+    71              1                      10019             password_entered = 1'b0;
+    72              1                      10019             entered = 0;
+    73                                                   end else begin
+    74              1                     504573             state <= next_state;
+    75                                                       if ($time - start_time >= TIMEOUT) begin
+    76              1                          1                 $finish;
+    77                                                       end
+    78                                                   end
+    79                                               end
+    80                                               
+    81                                               // State transition
+    82              1                      52101     always @(language_selected,
+    83                                                   card_inserted,
+    84                                                   request,
+    85                                                   deposit_value,
+    86                                                   withdraw_value,
+    87                                                   CardNo,
+    88                                                   Password,
+    89                                                   state) begin
+    90                                                   case (state)
+    91                                                       IDLE_STATE: begin
+    92                                                           if (card_inserted && entered == 1'b0) begin
+    93              1                       2540                     entered = 1;
+    94              1                       2540                     next_state = LANGUAGE_SELECTED_STATE;
+    95                                                           end
+    96                                                           else begin
+    97              1                      18681                     next_state = IDLE_STATE;
+    98                                                           end
+    99                                                       end
+    100                                                      LANGUAGE_SELECTED_STATE:
+    101             1                       2534                 if (language_selected === 1'b0 || language_selected === 1'b1) next_state = PASSWORD_ENTERED_STATE;
+    102             1                    ***0***                 else next_state = LANGUAGE_SELECTED_STATE;
+    103                                              
+    104                                                      PASSWORD_ENTERED_STATE: begin
+    105             1                       2536                     password_entered = 0;
+    106             1                       2536                     index = 3'b000;
+    107             1                       2536                     for (i = 0; i < 5; i = i + 1) begin
+    107             2                      12680     
+    108                                                                  if (CardNo == CardNos[i] && Password == Passwords[i]) begin
+    109             1                       2533                             password_entered = 1;
+    110             1                       2533                             index = i;
+    111                                                                  end
+    112                                                              end
+    113                                                          if (password_entered) begin
+    114             1                       2533                     next_state = OPERATION_SELECTED_STATE;
+    115                                                          end
+    116                                                          else begin
+    117             1                          3                     next_state = PASSWORD_ENTERED_STATE;
+    118                                                          end
+    119                                                      end
+    120                                              
+    121                                                      OPERATION_SELECTED_STATE:
+    122             1                       6151                 if (request === 2'b00) next_state = BALANCE_SERVICE_STATE;
+    123             1                       4922                 else if (request == 2'b01) next_state = DEPOSIT_STATE;
+    124             1                       4894                 else if (request == 2'b10) next_state = WITHDRAW_STATE;
+    125             1                       2537                 else if (request == 2'b11) next_state = IDLE_STATE;
+    126             1                    ***0***                 else next_state = OPERATION_SELECTED_STATE;
+    127                                              
+    128                                                      BALANCE_SERVICE_STATE:
+    129             1                       2398                 next_state = OPERATION_SELECTED_STATE;
+    130                                              
+    131                                                      DEPOSIT_STATE:
+    132             1                       2461                 next_state = OPERATION_SELECTED_STATE;
+    133                                              
+    134                                                      WITHDRAW_STATE:
+    135             1                       2447                 next_state = OPERATION_SELECTED_STATE; 
+    136                                              
+    137                                                      default:
+    138             1                    ***0***                 next_state = IDLE_STATE;
+    139                                                  endcase
+    140                                              end
+    141                                              
+    142                                              // output logic
+    143             1                      52101     always @(
+    144                                                  language_selected,
+    145                                                  card_inserted,
+    146                                                  request,
+    147                                                  deposit_value,
+    148                                                  withdraw_value,
+    149                                                  CardNo,
+    150                                                  Password,
+    151                                                  state
+    152                                              ) begin
+    153                                                  case (state)
+    154                                              
+    155                                                      BALANCE_SERVICE_STATE: begin
+    156             1                       2398                 balance_displayed = Balances[index];
+    157                                                      end
+    158                                              
+    159                                                      DEPOSIT_STATE: begin
+    160                                                          if (deposit_value <= 12'd2000) begin
+    161             1                       2459                     Balances[index] = Balances[index] + deposit_value;
+    162             1                       2459                     deposit_accepted = 1'b1;
+    163                                                          end 
+    164                                                          else begin 
+    165             1                          2                     deposit_accepted = 1'b0;
+    166                                                          end
+    167                                                      end
+    168                                              
+    169                                                      WITHDRAW_STATE: begin
+    170                                                          if (withdraw_value < Balances[index]) begin
+    171             1                       2447                     Balances[index] = Balances[index] - withdraw_value;
+    172             1                       2447                     withdraw_accepted = 1'b1;
+    173                                                          end 
+    174                                                          else begin 
+    175             1                    ***0***                     withdraw_accepted = 1'b0;
+    176                                                          end
+    177                                                      end
+    178                                                  endcase
+    179                                              end
+    180                                              
+    181                                              endmodule
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        262       165        97    62.97%
+
+================================Toggle Details================================
+
+Toggle Coverage for File ATM.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          3                                    clk           1           1      100.00 
+          4                                    rst           1           1      100.00 
+          5                      language_selected           1           1      100.00 
+          6                          card_inserted           1           1      100.00 
+          7                             request[1]           1           1      100.00 
+          7                             request[0]           1           1      100.00 
+          8                       deposit_value[9]           1           1      100.00 
+          8                       deposit_value[8]           1           1      100.00 
+          8                       deposit_value[7]           1           1      100.00 
+          8                       deposit_value[6]           1           1      100.00 
+          8                       deposit_value[5]           1           1      100.00 
+          8                       deposit_value[4]           1           1      100.00 
+          8                       deposit_value[3]           1           1      100.00 
+          8                       deposit_value[2]           1           1      100.00 
+          8                       deposit_value[1]           1           1      100.00 
+          8                      deposit_value[11]           1           1      100.00 
+          8                      deposit_value[10]           1           1      100.00 
+          8                       deposit_value[0]           1           1      100.00 
+          9                      withdraw_value[9]           1           1      100.00 
+          9                      withdraw_value[8]           1           1      100.00 
+          9                      withdraw_value[7]           1           1      100.00 
+          9                      withdraw_value[6]           1           1      100.00 
+          9                      withdraw_value[5]           1           1      100.00 
+          9                      withdraw_value[4]           1           1      100.00 
+          9                      withdraw_value[3]           1           1      100.00 
+          9                      withdraw_value[2]           1           1      100.00 
+          9                      withdraw_value[1]           1           1      100.00 
+          9                     withdraw_value[11]           1           1      100.00 
+          9                     withdraw_value[10]           1           1      100.00 
+          9                      withdraw_value[0]           1           1      100.00 
+         10                              CardNo[2]           1           1      100.00 
+         10                              CardNo[1]           1           1      100.00 
+         10                              CardNo[0]           1           1      100.00 
+         11                            Password[2]           1           1      100.00 
+         11                            Password[1]           1           1      100.00 
+         11                            Password[0]           1           1      100.00 
+         12                       deposit_accepted           1           1      100.00 
+         13                      withdraw_accepted           0           0        0.00 
+         14                   balance_displayed[9]           1           1      100.00 
+         14                   balance_displayed[8]           1           1      100.00 
+         14                   balance_displayed[7]           1           1      100.00 
+         14                   balance_displayed[6]           1           1      100.00 
+         14                   balance_displayed[5]           1           1      100.00 
+         14                   balance_displayed[4]           1           1      100.00 
+         14                   balance_displayed[3]           1           1      100.00 
+         14                   balance_displayed[2]           1           1      100.00 
+         14                   balance_displayed[1]           1           1      100.00 
+         14                  balance_displayed[17]           1           1      100.00 
+         14                  balance_displayed[16]           1           1      100.00 
+         14                  balance_displayed[15]           1           1      100.00 
+         14                  balance_displayed[14]           1           1      100.00 
+         14                  balance_displayed[13]           1           1      100.00 
+         14                  balance_displayed[12]           1           1      100.00 
+         14                  balance_displayed[11]           1           1      100.00 
+         14                  balance_displayed[10]           1           1      100.00 
+         14                   balance_displayed[0]           1           1      100.00 
+         18                               state[2]           1           1      100.00 
+         18                               state[1]           1           1      100.00 
+         18                               state[0]           1           1      100.00 
+         18                          next_state[2]           1           1      100.00 
+         18                          next_state[1]           1           1      100.00 
+         18                          next_state[0]           1           1      100.00 
+         19                          start_time[9]           1           1      100.00 
+         19                          start_time[8]           1           1      100.00 
+         19                          start_time[7]           1           1      100.00 
+         19                          start_time[6]           1           1      100.00 
+         19                          start_time[5]           1           1      100.00 
+         19                          start_time[4]           1           1      100.00 
+         19                          start_time[3]           1           1      100.00 
+         19                         start_time[31]           0           0        0.00 
+         19                         start_time[30]           0           0        0.00 
+         19                          start_time[2]           1           1      100.00 
+         19                         start_time[29]           0           0        0.00 
+         19                         start_time[28]           0           0        0.00 
+         19                         start_time[27]           0           0        0.00 
+         19                         start_time[26]           0           0        0.00 
+         19                         start_time[25]           0           0        0.00 
+         19                         start_time[24]           0           0        0.00 
+         19                         start_time[23]           0           0        0.00 
+         19                         start_time[22]           0           0        0.00 
+         19                         start_time[21]           0           0        0.00 
+         19                         start_time[20]           0           0        0.00 
+         19                          start_time[1]           1           1      100.00 
+         19                         start_time[19]           0           0        0.00 
+         19                         start_time[18]           0           0        0.00 
+         19                         start_time[17]           0           0        0.00 
+         19                         start_time[16]           0           1       50.00 
+         19                         start_time[15]           1           1      100.00 
+         19                         start_time[14]           1           1      100.00 
+         19                         start_time[13]           1           1      100.00 
+         19                         start_time[12]           1           1      100.00 
+         19                         start_time[11]           1           1      100.00 
+         19                         start_time[10]           1           1      100.00 
+         19                          start_time[0]           1           1      100.00 
+         20                       password_entered           1           1      100.00 
+         21                               index[2]           1           1      100.00 
+         21                               index[1]           1           1      100.00 
+         21                               index[0]           1           1      100.00 
+         22                                entered           1           1      100.00 
+         44                                   i[9]           0           0        0.00 
+         44                                   i[8]           0           0        0.00 
+         44                                   i[7]           0           0        0.00 
+         44                                   i[6]           0           0        0.00 
+         44                                   i[5]           0           0        0.00 
+         44                                   i[4]           0           0        0.00 
+         44                                   i[3]           0           0        0.00 
+         44                                  i[31]           0           0        0.00 
+         44                                  i[30]           0           0        0.00 
+         44                                   i[2]           0           0        0.00 
+         44                                  i[29]           0           0        0.00 
+         44                                  i[28]           0           0        0.00 
+         44                                  i[27]           0           0        0.00 
+         44                                  i[26]           0           0        0.00 
+         44                                  i[25]           0           0        0.00 
+         44                                  i[24]           0           0        0.00 
+         44                                  i[23]           0           0        0.00 
+         44                                  i[22]           0           0        0.00 
+         44                                  i[21]           0           0        0.00 
+         44                                  i[20]           0           0        0.00 
+         44                                   i[1]           0           0        0.00 
+         44                                  i[19]           0           0        0.00 
+         44                                  i[18]           0           0        0.00 
+         44                                  i[17]           0           0        0.00 
+         44                                  i[16]           0           0        0.00 
+         44                                  i[15]           0           0        0.00 
+         44                                  i[14]           0           0        0.00 
+         44                                  i[13]           0           0        0.00 
+         44                                  i[12]           0           0        0.00 
+         44                                  i[11]           0           0        0.00 
+         44                                  i[10]           0           0        0.00 
+         44                                   i[0]           0           0        0.00 
+
+Total Node Count     =        131 
+Toggled Node Count   =         82 
+Untoggled Node Count =         49 
+
+Toggle Coverage      =      62.97% (165 of 262 bins)
+
+=================================================================================
+=== File: Tb.v
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         6         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for file Tb.v --
+
+------------------------------------IF Branch------------------------------------
+    232                                     5000     Count coming in to IF
+    232             1                       1233         if(request==1) begin
+    235             1                       1262         else if(request==2) begin
+                                            2505     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    248                                    14764     Count coming in to IF
+    248             1                       3725         if(request==1) begin
+    251             1                       3647         else if(request==2) begin
+                                            7392     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       5         5         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for file Tb.v --
+
+----------------Focused Condition View-------------------
+Line       232 Item    1  (request == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request == 1)_0      -                             
+  Row   2:          1  (request == 1)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       235 Item    1  (request == 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request == 2)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request == 2)_0      -                             
+  Row   2:          1  (request == 2)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       244 Item    1  (request != 3)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request != 3)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request != 3)_0      -                             
+  Row   2:          1  (request != 3)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       248 Item    1  (request == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request == 1)_0      -                             
+  Row   2:          1  (request == 1)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       251 Item    1  (request == 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (request == 2)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (request == 2)_0      -                             
+  Row   2:          1  (request == 2)_1      -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     184       184         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for file Tb.v --
+
+    1                                                `timescale 1ms/1ms
+    2                                                module Tb;
+    3                                                reg clk, rst, language_selected, card_inserted;
+    4                                                reg [1:0] request;
+    5                                                reg [11:0] deposit_value;
+    6                                                reg [11:0] withdraw_value;
+    7                                                reg [2:0] CardNo;
+    8                                                reg [2:0] Password;
+    9                                                reg [2:0] temp;
+    10                                               
+    11                                               wire deposit_accepted;
+    12                                               wire withdraw_accepted;
+    13                                               wire [17:0] balance_displayed;
+    14                                               integer i;
+    15                                               ATM_FSM ATM1(.clk(clk),
+    16                                                       .rst(rst),
+    17                                                       .language_selected(language_selected),
+    18                                                       .card_inserted(card_inserted),
+    19                                                       .request(request),
+    20                                                       .deposit_value(deposit_value),
+    21                                                       .withdraw_value(withdraw_value),
+    22                                                       .CardNo(CardNo),
+    23                                                       .Password(Password),
+    24                                                       .deposit_accepted(deposit_accepted),
+    25                                                       .withdraw_accepted(withdraw_accepted),
+    26                                                       .balance_displayed(balance_displayed)
+    27                                                   );
+    28                                               
+    29                                               initial begin
+    30              1                          1     clk=0;
+    31              1                          1     forever
+    32              1                    1019172     #1 clk=~clk;
+    32              2                    1019171     
+    33                                               end
+    34                                               
+    35                                               initial begin
+    36              1                          1         rst=0;
+    37              1                          1         language_selected=0;
+    38              1                          1         card_inserted=0;
+    39              1                          1         request=0;
+    40              1                          1         deposit_value=0;
+    41              1                          1         withdraw_value=0;
+    42              1                          1         CardNo=0;
+    43              1                          1         Password=0;
+    44              1                          1         @(negedge clk);
+    45                                               
+    46                                               
+    47                                               // no.1
+    48                                               
+    49              1                          1     rst=1;
+    50              1                          1     language_selected=1;
+    51              1                          1     card_inserted=1;
+    52              1                          1     CardNo=1;
+    53              1                          1     Password=1;
+    54              1                          1     @(negedge clk);
+    55              1                          1     @(negedge clk);
+    56              1                          1     @(negedge clk);
+    57              1                          1     request=1;
+    58              1                          1     deposit_value=500;
+    59              1                          1     @(negedge clk);
+    60              1                          1     @(negedge clk);
+    61              1                          1     request=2;
+    62              1                          1     withdraw_value=200;
+    63              1                          1     @(negedge clk);
+    64              1                          1     @(negedge clk);
+    65              1                          1     request=1;
+    66              1                          1     deposit_value=500;
+    67              1                          1     @(negedge clk);
+    68              1                          1     @(negedge clk);
+    69              1                          1     request=2;
+    70              1                          1     withdraw_value=200;
+    71              1                          1     @(negedge clk);
+    72              1                          1     @(negedge clk);
+    73              1                          1     request=0;
+    74              1                          1     @(negedge clk);
+    75              1                          1     @(negedge clk);
+    76              1                          1     request=3;
+    77              1                          1     rst=0;
+    78                                               
+    79                                               //  no.2
+    80              1                          1     @(negedge clk);
+    81              1                          1     @(negedge clk);
+    82                                               
+    83              1                          1         rst=1;
+    84              1                          1         language_selected=0;
+    85              1                          1         card_inserted=1;
+    86              1                          1         CardNo=2;
+    87              1                          1         Password=2;
+    88              1                          1         @(negedge clk);
+    89              1                          1         @(negedge clk);
+    90              1                          1         @(negedge clk);
+    91              1                          1         request=1;
+    92              1                          1         deposit_value=1000;
+    93              1                          1         @(negedge clk);
+    94              1                          1         @(negedge clk);
+    95              1                          1         request=2;
+    96              1                          1         withdraw_value=800;
+    97              1                          1         @(negedge clk);
+    98              1                          1         @(negedge clk);
+    99              1                          1         withdraw_value=700;
+    100             1                          1         @(negedge clk);
+    101             1                          1         @(negedge clk);
+    102             1                          1         request=1;
+    103             1                          1         deposit_value=500;
+    104             1                          1         @(negedge clk);
+    105             1                          1         @(negedge clk);
+    106             1                          1         request=2;
+    107             1                          1         withdraw_value=600;
+    108             1                          1         @(negedge clk);
+    109             1                          1         @(negedge clk);
+    110             1                          1         request=3;
+    111             1                          1         rst=0;
+    112                                              
+    113             1                          1         @(negedge clk);
+    114             1                          1         @(negedge clk);
+    115                                              
+    116                                              // no.3
+    117             1                          1     rst=1;
+    118             1                          1     language_selected=0;
+    119             1                          1     card_inserted=1;
+    120             1                          1     CardNo=3;
+    121             1                          1     Password=3;
+    122             1                          1     @(negedge clk);
+    123             1                          1     @(negedge clk);
+    124             1                          1     @(negedge clk);
+    125             1                          1     request=1;
+    126             1                          1     deposit_value=100;
+    127             1                          1     @(negedge clk);
+    128             1                          1     @(negedge clk);
+    129             1                          1     request=2;
+    130             1                          1     withdraw_value=1500;
+    131             1                          1     @(negedge clk);
+    132             1                          1     @(negedge clk);
+    133             1                          1     request=3;
+    134             1                          1     rst=0;
+    135             1                          1     @(negedge clk);
+    136             1                          1     @(negedge clk);
+    137                                              
+    138                                              //  no.4 depositing more than 2000
+    139             1                          1         rst=1;
+    140             1                          1         language_selected=0;
+    141             1                          1         card_inserted=1;
+    142             1                          1         CardNo=4;
+    143             1                          1         Password=4;
+    144             1                          1         @(negedge clk);
+    145             1                          1         @(negedge clk);
+    146             1                          1         @(negedge clk);
+    147             1                          1         request=1;
+    148             1                          1         deposit_value=3000;
+    149             1                          1         @(negedge clk);
+    150             1                          1         @(negedge clk);
+    151             1                          1         request=2;
+    152             1                          1         withdraw_value=2500;
+    153             1                          1         @(negedge clk);
+    154             1                          1         @(negedge clk);
+    155             1                          1         request=1;
+    156             1                          1         deposit_value=4000;
+    157             1                          1         @(negedge clk);
+    158             1                          1         @(negedge clk);
+    159             1                          1         request=3;
+    160             1                          1         rst=0;
+    161             1                          1         @(negedge clk);
+    162             1                          1         @(negedge clk);
+    163                                              
+    164                                              //  no.5 wrong password
+    165             1                          1     rst=1;
+    166             1                          1     language_selected=1;
+    167             1                          1     card_inserted=1;
+    168             1                          1     CardNo=6;
+    169             1                          1     Password=6;
+    170             1                          1     @(negedge clk);
+    171             1                          1     @(negedge clk);
+    172             1                          1     @(negedge clk);
+    173             1                          1     request=1;
+    174             1                          1     deposit_value=500;
+    175             1                          1     @(negedge clk);
+    176             1                          1     @(negedge clk);
+    177             1                          1     request=3;
+    178             1                          1     rst=0;
+    179             1                          1     @(negedge clk);
+    180             1                          1     @(negedge clk);
+    181                                              
+    182                                              // no.6 two requsts at a time
+    183             1                          1         rst=1;
+    184             1                          1         language_selected=0;
+    185             1                          1         card_inserted=1;
+    186             1                          1         CardNo=2;
+    187             1                          1         Password=2;
+    188             1                          1         @(negedge clk);
+    189             1                          1         @(negedge clk);
+    190             1                          1         @(negedge clk);
+    191             1                          1         request=1;
+    192             1                          1         deposit_value=100;
+    193             1                          1         request=2;
+    194             1                          1         withdraw_value=500;
+    195             1                          1         @(negedge clk);
+    196             1                          1         @(negedge clk);
+    197             1                          1         request=3;  
+    198             1                          1         rst=0;
+    199                                              
+    200             1                          1         @(negedge clk);
+    201             1                          1         @(negedge clk);
+    202                                              
+    203             1                          1     for(i = 0;i < 5000; i=i+1) begin
+    203             2                       5000     
+    204                                              
+    205                                              //Resting the values
+    206             1                       5000         rst=0;
+    207             1                       5000         language_selected=0;
+    208             1                       5000         card_inserted=0;
+    209             1                       5000         request=0;
+    210             1                       5000         deposit_value=0;
+    211             1                       5000         withdraw_value=0;
+    212             1                       5000         CardNo=0;
+    213             1                       5000         Password=0;
+    214                                                  
+    215                                              
+    216             1                       5000     @(negedge clk);
+    217                                              
+    218             1                       5000         rst=1;
+    219             1                       5000         card_inserted = $random();
+    220             1                       5000         language_selected=$random();
+    221             1                       5000         temp = $urandom_range(1,5);
+    222             1                       5000         CardNo = temp;
+    223             1                       5000         Password = temp;
+    224                                              
+    225             1                       5000         @(negedge clk);
+    226             1                       5000         @(negedge clk);
+    227             1                       5000         @(negedge clk);//after password
+    228                                              
+    229                                              
+    230                                              
+    231             1                       5000         request=$random();
+    232                                                  if(request==1) begin
+    233             1                       1233             deposit_value=  1 + {$random()} % (2000 - 1);
+    234                                                  end
+    235                                                  else if(request==2) begin
+    236             1                       1262             withdraw_value=  1 + {$random()} % (2000 - 1);
+    237                                                  end
+    238                                                  
+    239             1                       5000         @(negedge clk);
+    240             1                       5000         @(negedge clk);
+    241                                              
+    242                                              
+    243                                              
+    244             1                      19764     while(request != 3) begin
+    245                                              
+    246             1                      14764         request=$random();
+    247                                              
+    248                                                  if(request==1) begin
+    249             1                       3725             deposit_value=  1 + {$random()} % (2000 - 1);
+    250                                                  end
+    251                                                  else if(request==2) begin
+    252             1                       3647             withdraw_value=  1 + {$random()} % (2000 - 1);
+    253                                                  end
+    254                                              
+    255             1                      14764         @(negedge clk);
+    256             1                      14764         @(negedge clk);
+    257                                              
+    258                                              end
+    259                                                  
+    260                                              end 
+    261                                              
+    262                                              end
+    263                                              
+    264                                              // Assertion 1:
+    265                                              // psl assert always (request == 2 -> next withdraw_accepted) @(posedge clk);
+    266                                              
+    267                                              // Assertion 2:
+    268                                              // psl assert always (request == 1 && deposit_value > 2000 -> next !deposit_accepted) @(posedge clk);
+    269                                              
+    270                                              // Assertion 3: deposits cannot be negative.
+    271                                              // psl assert always (deposit_value >= 0) @(posedge clk);
+    272                                              
+    273                                              // Assertion 4: withdrawals cannot be negative.
+    274                                              // psl assert always (withdraw_value >= 0) @(posedge clk);
+    275                                              
+    276                                              endmodule
+    277                                              
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        182       141        41    77.47%
+
+================================Toggle Details================================
+
+Toggle Coverage for File Tb.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          3                                    rst           1           1      100.00 
+          3                      language_selected           1           1      100.00 
+          3                                    clk           1           1      100.00 
+          3                          card_inserted           1           1      100.00 
+          4                             request[1]           1           1      100.00 
+          4                             request[0]           1           1      100.00 
+          5                       deposit_value[9]           1           1      100.00 
+          5                       deposit_value[8]           1           1      100.00 
+          5                       deposit_value[7]           1           1      100.00 
+          5                       deposit_value[6]           1           1      100.00 
+          5                       deposit_value[5]           1           1      100.00 
+          5                       deposit_value[4]           1           1      100.00 
+          5                       deposit_value[3]           1           1      100.00 
+          5                       deposit_value[2]           1           1      100.00 
+          5                       deposit_value[1]           1           1      100.00 
+          5                      deposit_value[11]           1           1      100.00 
+          5                      deposit_value[10]           1           1      100.00 
+          5                       deposit_value[0]           1           1      100.00 
+          6                      withdraw_value[9]           1           1      100.00 
+          6                      withdraw_value[8]           1           1      100.00 
+          6                      withdraw_value[7]           1           1      100.00 
+          6                      withdraw_value[6]           1           1      100.00 
+          6                      withdraw_value[5]           1           1      100.00 
+          6                      withdraw_value[4]           1           1      100.00 
+          6                      withdraw_value[3]           1           1      100.00 
+          6                      withdraw_value[2]           1           1      100.00 
+          6                      withdraw_value[1]           1           1      100.00 
+          6                     withdraw_value[11]           1           1      100.00 
+          6                     withdraw_value[10]           1           1      100.00 
+          6                      withdraw_value[0]           1           1      100.00 
+          7                              CardNo[2]           1           1      100.00 
+          7                              CardNo[1]           1           1      100.00 
+          7                              CardNo[0]           1           1      100.00 
+          8                            Password[2]           1           1      100.00 
+          8                            Password[1]           1           1      100.00 
+          8                            Password[0]           1           1      100.00 
+          9                                temp[2]           1           1      100.00 
+          9                                temp[1]           1           1      100.00 
+          9                                temp[0]           1           1      100.00 
+         11                       deposit_accepted           1           1      100.00 
+         12                      withdraw_accepted           0           0        0.00 
+         13                   balance_displayed[9]           1           1      100.00 
+         13                   balance_displayed[8]           1           1      100.00 
+         13                   balance_displayed[7]           1           1      100.00 
+         13                   balance_displayed[6]           1           1      100.00 
+         13                   balance_displayed[5]           1           1      100.00 
+         13                   balance_displayed[4]           1           1      100.00 
+         13                   balance_displayed[3]           1           1      100.00 
+         13                   balance_displayed[2]           1           1      100.00 
+         13                   balance_displayed[1]           1           1      100.00 
+         13                  balance_displayed[17]           1           1      100.00 
+         13                  balance_displayed[16]           1           1      100.00 
+         13                  balance_displayed[15]           1           1      100.00 
+         13                  balance_displayed[14]           1           1      100.00 
+         13                  balance_displayed[13]           1           1      100.00 
+         13                  balance_displayed[12]           1           1      100.00 
+         13                  balance_displayed[11]           1           1      100.00 
+         13                  balance_displayed[10]           1           1      100.00 
+         13                   balance_displayed[0]           1           1      100.00 
+         14                                   i[9]           1           1      100.00 
+         14                                   i[8]           1           1      100.00 
+         14                                   i[7]           1           1      100.00 
+         14                                   i[6]           1           1      100.00 
+         14                                   i[5]           1           1      100.00 
+         14                                   i[4]           1           1      100.00 
+         14                                   i[3]           1           1      100.00 
+         14                                  i[31]           0           0        0.00 
+         14                                  i[30]           0           0        0.00 
+         14                                   i[2]           1           1      100.00 
+         14                                  i[29]           0           0        0.00 
+         14                                  i[28]           0           0        0.00 
+         14                                  i[27]           0           0        0.00 
+         14                                  i[26]           0           0        0.00 
+         14                                  i[25]           0           0        0.00 
+         14                                  i[24]           0           0        0.00 
+         14                                  i[23]           0           0        0.00 
+         14                                  i[22]           0           0        0.00 
+         14                                  i[21]           0           0        0.00 
+         14                                  i[20]           0           0        0.00 
+         14                                   i[1]           1           1      100.00 
+         14                                  i[19]           0           0        0.00 
+         14                                  i[18]           0           0        0.00 
+         14                                  i[17]           0           0        0.00 
+         14                                  i[16]           0           0        0.00 
+         14                                  i[15]           0           0        0.00 
+         14                                  i[14]           0           0        0.00 
+         14                                  i[13]           0           0        0.00 
+         14                                  i[12]           0           1       50.00 
+         14                                  i[11]           1           1      100.00 
+         14                                  i[10]           1           1      100.00 
+         14                                   i[0]           1           1      100.00 
+
+Total Node Count     =         91 
+Toggled Node Count   =         70 
+Untoggled Node Count =         21 
+
+Toggle Coverage      =      77.47% (141 of 182 bins)
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/Tb/assert__3        Tb.v(274)                          0          1
+/Tb/assert__2        Tb.v(271)                          0          1
+/Tb/assert__1        Tb.v(268)                          0          1
+/Tb/assert__0        Tb.v(265)                          0          1
+
+Total Coverage By File (code coverage only, filtered view): 83.75%
+

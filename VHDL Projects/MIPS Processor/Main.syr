@@ -1,0 +1,806 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\pack_1.vhd" into library work
+Parsing package <pack_1>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mux32.vhd" into library work
+Parsing entity <mux_32>.
+Parsing architecture <Behavioral> of entity <mux_32>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\flopr.vhd" into library work
+Parsing entity <flopr>.
+Parsing architecture <Behavioral> of entity <flopr>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\decoder.vhd" into library work
+Parsing entity <decoder>.
+Parsing architecture <Behavioral> of entity <decoder>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\sl2.vhd" into library work
+Parsing entity <sl2>.
+Parsing architecture <Behavioral> of entity <sl2>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\SignExtend.vhd" into library work
+Parsing entity <SignExtender>.
+Parsing architecture <Behavioral> of entity <signextender>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" into library work
+Parsing entity <RegisterFile>.
+Parsing architecture <Behavioral> of entity <registerfile>.
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 61: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 62: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 63: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 64: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 65: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 66: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 67: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 68: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 69: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 70: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 71: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 72: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 73: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 74: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 75: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 76: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 77: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 78: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 79: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 80: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 81: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 82: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 83: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 84: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 85: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 86: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 87: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 88: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 89: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 90: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 91: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd" Line 92: Actual for formal port load is neither a static name nor a globally static expression
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mux3.vhd" into library work
+Parsing entity <mux3>.
+Parsing architecture <Behavioral> of entity <mux3>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mux2.vhd" into library work
+Parsing entity <mux2>.
+Parsing architecture <Behavioral> of entity <mux2>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\maindec.vhd" into library work
+Parsing entity <maindec>.
+Parsing architecture <Behavioral> of entity <maindec>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\control_pack.vhd" into library work
+Parsing package <control_pack>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\aludec.vhd" into library work
+Parsing entity <aludec>.
+Parsing architecture <Behavioral> of entity <aludec>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\adder.vhd" into library work
+Parsing entity <adder>.
+Parsing architecture <Behavioral> of entity <adder>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\datapath.vhd" into library work
+Parsing entity <Datapath>.
+Parsing architecture <Behavioral> of entity <datapath>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\controller.vhd" into library work
+Parsing entity <controller>.
+Parsing architecture <Behavioral> of entity <controller>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\Mips.vhd" into library work
+Parsing entity <Mips>.
+Parsing architecture <Behavioral> of entity <mips>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\imem.vhd" into library work
+Parsing entity <imem>.
+Parsing architecture <behave> of entity <imem>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\dmem.vhd" into library work
+Parsing entity <dmem>.
+Parsing architecture <behave> of entity <dmem>.
+Parsing VHDL file "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\Main.vhd" into library work
+Parsing entity <Main>.
+Parsing architecture <Behavioral> of entity <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Main> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <imem> (architecture <behave>) from library <work>.
+
+Elaborating entity <dmem> (architecture <behave>) from library <work>.
+
+Elaborating entity <Mips> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <controller> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <aludec> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <maindec> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Datapath> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RegisterFile> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <flopr> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <mux_32> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <decoder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sl2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux3> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SignExtender> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\Main.vhd".
+    Summary:
+	no macro.
+Unit <Main> synthesized.
+
+Synthesizing Unit <imem>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\imem.vhd".
+    Found 64x32-bit Read Only RAM for signal <rd>
+    Summary:
+	inferred   1 RAM(s).
+Unit <imem> synthesized.
+
+Synthesizing Unit <dmem>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\dmem.vhd".
+WARNING:Xst:647 - Input <a<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <a<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 64x32-bit single-port RAM <Mram_mem> for signal <mem>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <dmem> synthesized.
+
+Synthesizing Unit <Mips>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\Mips.vhd".
+    Summary:
+	no macro.
+Unit <Mips> synthesized.
+
+Synthesizing Unit <controller>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\controller.vhd".
+    Summary:
+	no macro.
+Unit <controller> synthesized.
+
+Synthesizing Unit <aludec>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\aludec.vhd".
+    Summary:
+	no macro.
+Unit <aludec> synthesized.
+
+Synthesizing Unit <maindec>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\maindec.vhd".
+    Summary:
+	no macro.
+Unit <maindec> synthesized.
+
+Synthesizing Unit <Datapath>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\datapath.vhd".
+WARNING:Xst:647 - Input <instr<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Datapath> synthesized.
+
+Synthesizing Unit <RegisterFile>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\regfile.vhd".
+        n = 32
+    Summary:
+	no macro.
+Unit <RegisterFile> synthesized.
+
+Synthesizing Unit <flopr>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\flopr.vhd".
+        n = 32
+    Found 32-bit register for signal <temp>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <flopr> synthesized.
+
+Synthesizing Unit <mux_32>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mux32.vhd".
+        n = 32
+    Found 32-bit 32-to-1 multiplexer for signal <y> created at line 40.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_32> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\decoder.vhd".
+        n = 32
+    Found 32x32-bit Read Only RAM for signal <o>
+    Summary:
+	inferred   1 RAM(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\ALU.vhd".
+    Found 33-bit adder for signal <tmp1> created at line 27.
+    Found 32-bit subtractor for signal <tmp2<31:0>> created at line 19.
+    Found 1-bit tristate buffer for signal <result<31>> created at line 34
+    Found 1-bit tristate buffer for signal <result<30>> created at line 34
+    Found 1-bit tristate buffer for signal <result<29>> created at line 34
+    Found 1-bit tristate buffer for signal <result<28>> created at line 34
+    Found 1-bit tristate buffer for signal <result<27>> created at line 34
+    Found 1-bit tristate buffer for signal <result<26>> created at line 34
+    Found 1-bit tristate buffer for signal <result<25>> created at line 34
+    Found 1-bit tristate buffer for signal <result<24>> created at line 34
+    Found 1-bit tristate buffer for signal <result<23>> created at line 34
+    Found 1-bit tristate buffer for signal <result<22>> created at line 34
+    Found 1-bit tristate buffer for signal <result<21>> created at line 34
+    Found 1-bit tristate buffer for signal <result<20>> created at line 34
+    Found 1-bit tristate buffer for signal <result<19>> created at line 34
+    Found 1-bit tristate buffer for signal <result<18>> created at line 34
+    Found 1-bit tristate buffer for signal <result<17>> created at line 34
+    Found 1-bit tristate buffer for signal <result<16>> created at line 34
+    Found 1-bit tristate buffer for signal <result<15>> created at line 34
+    Found 1-bit tristate buffer for signal <result<14>> created at line 34
+    Found 1-bit tristate buffer for signal <result<13>> created at line 34
+    Found 1-bit tristate buffer for signal <result<12>> created at line 34
+    Found 1-bit tristate buffer for signal <result<11>> created at line 34
+    Found 1-bit tristate buffer for signal <result<10>> created at line 34
+    Found 1-bit tristate buffer for signal <result<9>> created at line 34
+    Found 1-bit tristate buffer for signal <result<8>> created at line 34
+    Found 1-bit tristate buffer for signal <result<7>> created at line 34
+    Found 1-bit tristate buffer for signal <result<6>> created at line 34
+    Found 1-bit tristate buffer for signal <result<5>> created at line 34
+    Found 1-bit tristate buffer for signal <result<4>> created at line 34
+    Found 1-bit tristate buffer for signal <result<3>> created at line 34
+    Found 1-bit tristate buffer for signal <result<2>> created at line 34
+    Found 1-bit tristate buffer for signal <result<1>> created at line 34
+    Found 1-bit tristate buffer for signal <result<0>> created at line 34
+    Found 32-bit comparator greater for signal <data1[31]_data2[31]_LessThan_3_o> created at line 31
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred 320 Multiplexer(s).
+	inferred  32 Tristate(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <adder>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\adder.vhd".
+    Found 32-bit adder for signal <sum> created at line 42.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <adder> synthesized.
+
+Synthesizing Unit <sl2>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\sl2.vhd".
+WARNING:Xst:647 - Input <a<31:30>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <sl2> synthesized.
+
+Synthesizing Unit <mux2>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mux2.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux2> synthesized.
+
+Synthesizing Unit <mux3>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mux3.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux3> synthesized.
+
+Synthesizing Unit <SignExtender>.
+    Related source file is "D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\SignExtend.vhd".
+    Summary:
+	no macro.
+Unit <SignExtender> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x32-bit single-port Read Only RAM                   : 1
+ 64x32-bit single-port RAM                             : 1
+ 64x32-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 33
+ 32-bit register                                       : 33
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 328
+ 1-bit 2-to-1 multiplexer                              : 320
+ 32-bit 2-to-1 multiplexer                             : 5
+ 32-bit 32-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 32
+ 1-bit tristate buffer                                 : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <decoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <I>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <o>             |          |
+    -----------------------------------------------------------------------
+Unit <decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dmem>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <a>             |          |
+    |     diA            | connected to signal <wd>            |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <dmem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <imem>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_rd> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <a>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <rd>            |          |
+    -----------------------------------------------------------------------
+Unit <imem> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x32-bit single-port distributed Read Only RAM       : 1
+ 64x32-bit single-port distributed RAM                 : 1
+ 64x32-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 1056
+ Flip-Flops                                            : 1056
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 328
+ 1-bit 2-to-1 multiplexer                              : 320
+ 32-bit 2-to-1 multiplexer                             : 5
+ 32-bit 32-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2042 - Unit Main: 32 internal tristates are replaced by logic (pull-up yes): N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N2, N20, N21, N22, N23, N24, N25, N26, N27, N28, N29, N3, N30, N31, N32, N33, N4, N5, N6, N7, N8, N9.
+
+Optimizing unit <flopr> ...
+
+Optimizing unit <Main> ...
+
+Optimizing unit <RegisterFile> ...
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_31> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_30> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_29> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_28> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_27> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_26> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_25> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_24> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_23> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_22> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_21> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_20> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_19> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_18> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_17> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_16> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_14> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_13> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_12> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_11> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_10> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_9> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_8> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_1> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <processormips/path/pcreg/temp_0> of sequential type is unconnected in block <Main>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1030
+ Flip-Flops                                            : 1030
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1216
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 4
+#      LUT2                        : 6
+#      LUT3                        : 39
+#      LUT4                        : 112
+#      LUT5                        : 38
+#      LUT6                        : 784
+#      MUXCY                       : 90
+#      MUXF7                       : 64
+#      VCC                         : 1
+#      XORCY                       : 76
+# FlipFlops/Latches                : 1030
+#      FDC                         : 6
+#      FDCE                        : 1024
+# RAMS                             : 32
+#      RAM64X1S                    : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 1
+#      OBUF                        : 33
+#      OBUFT                       : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1030  out of  126800     0%  
+ Number of Slice LUTs:                 1016  out of  63400     1%  
+    Number used as Logic:               984  out of  63400     1%  
+    Number used as Memory:               32  out of  19000     0%  
+       Number used as RAM:               32
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1992
+   Number with an unused Flip Flop:     962  out of   1992    48%  
+   Number with an unused LUT:           976  out of   1992    48%  
+   Number of fully used LUT-FF pairs:    54  out of   1992     2%  
+   Number of unique control sets:        33
+
+IO Utilization: 
+ Number of IOs:                          67
+ Number of bonded IOBs:                  67  out of    210    31%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1062  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.562ns (Maximum Frequency: 152.386MHz)
+   Minimum input arrival time before clock: 0.824ns
+   Maximum output required time after clock: 5.761ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.562ns (frequency: 152.386MHz)
+  Total number of paths / destination ports: 59156103 / 2310
+-------------------------------------------------------------------------
+Delay:               6.562ns (Levels of Logic = 31)
+  Source:            processormips/path/pcreg/temp_6 (FF)
+  Destination:       processormips/path/pcreg/temp_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: processormips/path/pcreg/temp_6 to processormips/path/pcreg/temp_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             21   0.361   0.784  processormips/path/pcreg/temp_6 (processormips/path/pcreg/temp_6)
+     LUT6:I0->O          256   0.097   0.520  instrmem/Mram_rd211 (instr<21>)
+     LUT6:I4->O            1   0.097   0.556  processormips/path/regfile/mux1/Mmux_y_81 (processormips/path/regfile/mux1/Mmux_y_81)
+     LUT6:I2->O            1   0.097   0.000  processormips/path/regfile/mux1/Mmux_y_3 (processormips/path/regfile/mux1/Mmux_y_3)
+     MUXF7:I1->O           5   0.279   0.398  processormips/path/regfile/mux1/Mmux_y_2_f7 (processormips/path/read_data1<0>)
+     LUT4:I2->O            1   0.097   0.000  processormips/path/alufile/Msub_tmp2<31:0>_lut<0> (processormips/path/alufile/Msub_tmp2<31:0>_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<0> (processormips/path/alufile/Msub_tmp2<31:0>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<1> (processormips/path/alufile/Msub_tmp2<31:0>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<2> (processormips/path/alufile/Msub_tmp2<31:0>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<3> (processormips/path/alufile/Msub_tmp2<31:0>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<4> (processormips/path/alufile/Msub_tmp2<31:0>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<5> (processormips/path/alufile/Msub_tmp2<31:0>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<6> (processormips/path/alufile/Msub_tmp2<31:0>_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<7> (processormips/path/alufile/Msub_tmp2<31:0>_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<8> (processormips/path/alufile/Msub_tmp2<31:0>_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<9> (processormips/path/alufile/Msub_tmp2<31:0>_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<10> (processormips/path/alufile/Msub_tmp2<31:0>_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<11> (processormips/path/alufile/Msub_tmp2<31:0>_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<12> (processormips/path/alufile/Msub_tmp2<31:0>_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<13> (processormips/path/alufile/Msub_tmp2<31:0>_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<14> (processormips/path/alufile/Msub_tmp2<31:0>_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<15> (processormips/path/alufile/Msub_tmp2<31:0>_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<16> (processormips/path/alufile/Msub_tmp2<31:0>_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<17> (processormips/path/alufile/Msub_tmp2<31:0>_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<18> (processormips/path/alufile/Msub_tmp2<31:0>_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<19> (processormips/path/alufile/Msub_tmp2<31:0>_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Msub_tmp2<31:0>_cy<20> (processormips/path/alufile/Msub_tmp2<31:0>_cy<20>)
+     XORCY:CI->O           1   0.370   0.379  processormips/path/alufile/Msub_tmp2<31:0>_xor<21> (processormips/path/alufile/tmp2<21>)
+     LUT6:I4->O            3   0.097   0.703  processormips/path/alufile/Mmux_Z_23_o_data1[31]_MUX_196_o15 (dataadr_21_OBUFT)
+     LUT6:I0->O            6   0.097   0.318  processormips/control/pcsrc3 (processormips/control/pcsrc2)
+     LUT6:I5->O            1   0.097   0.295  processormips/control/pcsrc8_SW1 (N44)
+     LUT6:I5->O            1   0.097   0.000  processormips/path/pcmux/Mmux_c231 (processormips/path/pcnext<2>)
+     FDC:D                     0.008          processormips/path/pcreg/temp_2
+    ----------------------------------------
+    Total                      6.562ns (2.607ns logic, 3.955ns route)
+                                       (39.7% logic, 60.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1030 / 1030
+-------------------------------------------------------------------------
+Offset:              0.824ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       processormips/path/regfile/r31/temp_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to processormips/path/regfile/r31/temp_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1030   0.001   0.474  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.349          processormips/path/regfile/r31/temp_0
+    ----------------------------------------
+    Total                      0.824ns (0.350ns logic, 0.474ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 574670 / 65
+-------------------------------------------------------------------------
+Offset:              5.761ns (Levels of Logic = 26)
+  Source:            processormips/path/pcreg/temp_7 (FF)
+  Destination:       dataadr<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: processormips/path/pcreg/temp_7 to dataadr<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             20   0.361   0.781  processormips/path/pcreg/temp_7 (processormips/path/pcreg/temp_7)
+     LUT6:I0->O          257   0.097   0.521  instrmem/Mram_rd171 (instr<17>)
+     LUT6:I4->O            1   0.097   0.556  processormips/path/regfile/mux2/Mmux_y_81 (processormips/path/regfile/mux2/Mmux_y_81)
+     LUT6:I2->O            1   0.097   0.000  processormips/path/regfile/mux2/Mmux_y_3 (processormips/path/regfile/mux2/Mmux_y_3)
+     MUXF7:I1->O           6   0.279   0.318  processormips/path/regfile/mux2/Mmux_y_2_f7 (writedata_0_OBUF)
+     LUT3:I2->O            3   0.097   0.566  processormips/path/regfileToAlu/Mmux_c110 (processormips/path/alumuxout<0>)
+     LUT4:I0->O            1   0.097   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_lut<0> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<0> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<1> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<2> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<3> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<4> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<5> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<6> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<7> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<8> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<9> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<10> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<11> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<12> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<13> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<14> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<14>)
+     MUXCY:CI->O           3   0.023   0.000  processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<15> (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  processormips/path/alufile/Mmux_Z_23_o_data1[31]_MUX_322_o15_cy (processormips/path/alufile/Mcompar_data1[31]_data2[31]_LessThan_3_o_cy<15>_l1)
+     MUXCY:CI->O           1   0.253   0.511  processormips/path/alufile/Mmux_Z_23_o_data1[31]_MUX_322_o15_cy1 (processormips/path/alufile/Mmux_Z_23_o_data1[31]_MUX_322_o14)
+     LUT6:I3->O            8   0.097   0.311  processormips/path/alufile/Mmux_Z_23_o_data1[31]_MUX_322_o17 (dataadr_0_OBUFT)
+     OBUFT:I->O                0.000          dataadr_0_OBUFT (dataadr<0>)
+    ----------------------------------------
+    Total                      5.761ns (2.196ns logic, 3.565ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.562|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 79.00 secs
+Total CPU time to Xst completion: 78.90 secs
+ 
+--> 
+
+Total memory usage is 4781488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   63 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

@@ -1,0 +1,63 @@
+Running: E:\Xillinx\Xilinx_ISE_Design_Suite_v14.7\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/RegisterFileTest_isim_beh.exe -prj D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/RegisterFileTest_beh.prj work.RegisterFileTest 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/pack_1.vhd" into library work
+Parsing VHDL file "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/mux32.vhd" into library work
+Parsing VHDL file "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/flopr.vhd" into library work
+Parsing VHDL file "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/decoder.vhd" into library work
+Parsing VHDL file "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" into library work
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 61: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 62: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 63: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 64: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 65: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 66: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 67: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 68: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 69: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 70: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 71: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 72: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 73: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 74: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 75: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 76: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 77: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 78: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 79: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 80: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 81: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 82: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 83: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 84: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 85: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 86: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 87: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 88: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 89: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 90: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 91: Actual for formal port load is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regfile.vhd" Line 92: Actual for formal port load is neither a static name nor a globally static expression
+Parsing VHDL file "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/regtest.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package std_logic_signed
+Compiling package pack_1
+Compiling architecture behavioral of entity flopr [\flopr(32)\]
+Compiling architecture behavioral of entity mux_32 [\mux_32(32)\]
+Compiling architecture behavioral of entity decoder [\decoder(32)\]
+Compiling architecture behavioral of entity RegisterFile [\RegisterFile(32)\]
+Compiling architecture behavior of entity registerfiletest
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 16 VHDL Units
+Built simulation executable D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/RegisterFileTest_isim_beh.exe
+Fuse Memory Usage: 38356 KB
+Fuse CPU Usage: 578 ms

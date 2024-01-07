@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/mainn.xst" -ofn "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/mainn.syr" 
+xst -intstyle ise -ifn "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/mainn.xst" -ofn "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/mainn.syr" 

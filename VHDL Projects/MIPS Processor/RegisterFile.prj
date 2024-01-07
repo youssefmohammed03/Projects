@@ -1,0 +1,5 @@
+vhdl work "pack_1.vhd"
+vhdl work "mux32.vhd"
+vhdl work "flopr.vhd"
+vhdl work "decoder.vhd"
+vhdl work "regfile.vhd"

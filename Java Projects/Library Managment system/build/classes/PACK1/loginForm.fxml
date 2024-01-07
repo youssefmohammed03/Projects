@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACK1.controller">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="1043.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="628.0" prefWidth="1033.0">
+               <children>
+                  <Pane prefHeight="618.0" prefWidth="551.0" style="-fx-background-color: #2c2cce;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="126.0" layoutX="33.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="439.0">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color green="0.4274509847164154" blue="0.8274509906768799" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                           <effect>
+                              <GaussianBlur />
+                           </effect>
+                        </Rectangle>
+                        <Text fill="#a13939" layoutX="77.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome , To Library Managment System" wrappingWidth="399.0">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="230.0" fitWidth="340.0" layoutX="81.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/pngegg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="551.0" prefHeight="618.0" prefWidth="472.0" AnchorPane.leftAnchor="551.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button id="button" layoutX="131.0" layoutY="496.0" mnemonicParsing="false" onAction="#checkReaderOrLibrarian" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #a13939;" text="Login" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="id" layoutX="71.0" layoutY="137.0" prefHeight="55.0" prefWidth="330.0" promptText="ID" />
+                        <PasswordField fx:id="password" layoutX="71.0" layoutY="235.0" prefHeight="55.0" prefWidth="330.0" promptText="PASSWORD" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

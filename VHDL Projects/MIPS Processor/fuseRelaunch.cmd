@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/RegisterFileTest_isim_beh.exe" -prj "D:/yusuf/subjects/Sophomore semester 4/Computer organization and architecture/Major Task/Group7_21P0144/project/RegisterFileTest_beh.prj" "work.RegisterFileTest" 

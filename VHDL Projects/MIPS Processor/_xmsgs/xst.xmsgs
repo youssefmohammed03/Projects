@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="104" delta="new" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 23: Cannot find &lt;<arg fmt="%s" index="1">pack_1</arg>&gt; in library &lt;<arg fmt="%s" index="2">work</arg>&gt;. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 34: Unit &lt;<arg fmt="%s" index="1">mainn</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 39: Entity &lt;<arg fmt="%s" index="1">mainn</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 41: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 42: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 43: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 47: &lt;<arg fmt="%s" index="1">aluop</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 48: &lt;<arg fmt="%s" index="1">data1</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 49: &lt;<arg fmt="%s" index="1">data2</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 51: Syntax error near &quot;<arg fmt="%s" index="1">if</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 52: &lt;<arg fmt="%s" index="1">adderandsub</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 54: Syntax error near &quot;<arg fmt="%s" index="1">elsif</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 55: &lt;<arg fmt="%s" index="1">sr1</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 57: Syntax error near &quot;<arg fmt="%s" index="1">elsif</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 58: Syntax error near &quot;<arg fmt="%s" index="1">;</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 60: &lt;<arg fmt="%s" index="1">output</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="old" >"D:\yusuf\subjects\Sophomore semester 4\Computer organization and architecture\Major Task\Group7_21P0144\project\mainn.vhd" Line 62: Syntax error near &quot;<arg fmt="%s" index="1">if</arg>&quot;.
+</msg>
+
+</messages>
+
