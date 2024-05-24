@@ -1,0 +1,65 @@
+/* Sidebar styling */
+
+
+/* Navbar styling */
+.sidebar {
+  background-color: rgb(146, 190, 146);
+  height: 100%;
+  width: 290px;
+  position: fixed; /* Change position to fixed */
+  top: 80px; /* Set the top position to accommodate the navbar height */
+  bottom: 0; /* Set bottom to 0 to fill the remaining space */
+  overflow-y: auto; /* Add scrollbar if content overflows vertically */
+  z-index: 1; /* Ensure sidebar is behind other elements */
+}
+
+/* Sidebar link styling */
+.sidebar a {
+  display: block;
+  padding: 17px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Style for nested submenu links */
+.sidebar ul ul a {
+  padding-left: 23px;
+  font-size: 18px;
+}
+.sidebar-item {
+  margin-top: 10px;
+}
+
+/* Main content */
+.main-content {
+  margin-top: 80px; /* Adjust margin to accommodate the navbar */
+  margin-left: 290px; /* Adjust margin to accommodate the sidebar */
+  z-index: 0; /* Ensure main content is below navbar and sidebar */
+}
+
+/* Navbar styling */
+.navbar {
+  height: 80px;
+  position: fixed; /* Ensure navbar is fixed */
+  top: 0; /* Position navbar at the top */
+  width: 100%; /* Make the navbar full width */
+  z-index: 2; /* Ensure navbar is above other elements */
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  font-size: 28px;
+}
+
+/* Navbar text styling */
+.navbar-text {
+  font-size: 23px;
+}.content-container {
+  margin-top: 150px; 
+}
+.table-responsive {
+  max-width: 95%; /* Adjust the maximum width as needed */
+  margin: 20px auto; /* Center the table horizontally */
+}
+
